@@ -1,5 +1,20 @@
 {
-  "version": "1.1.0",
-  "released": "2026-10-08",
-  "changelog": []
+  "version": "1.2.0",
+  "released": "2026-10-11",
+  "changelog": [
+    "Company money now lives in your framework's society accounts (esx_addonaccount, Renewed-Banking, qb-banking or qb-management), so money paid in by billing, fines and shops shows in the Work Tablet.",
+    "Every balance change is recorded in a ledger, and every management action (hires, firings, promotions, grade edits, payments) in an audit log.",
+    "Everything players read can be translated: the Work Tablet, City Services, the Job Portal, ID cards and every notification. Copy `locales/en.lua` to your language, translate it and set `Config.Locale`; anything you leave out stays English.",
+    "Developer API v1: `docs/API.md` documents every export and event, and `GetApiVersion` returns the version.",
+    "Console commands `cityhub_doctor` (money provider and balances) and `cityhub_audit <job>` (latest actions).",
+    "Managers can now only hire, promote, demote, fire or pay members below their own grade. Set `ServerConfig.Management.strictRanks = false` for the 1.1 behaviour.",
+    "Resigning from the tablet now notifies managers and is audited.",
+    "Removed the unused `bhuvi_cityhub:mdt:*` callbacks, the `PaginatedQuery` export and `ServerConfig.MDT`.",
+    "Saving grades no longer replaces the Work Tablet with \"Slow down a little\".",
+    "The Employees tab no longer offers Fire or grade changes the server refuses.",
+    "Errors the server returns that have no translation now show a general message instead of a raw code.",
+    "Deposits and withdrawals over the limit now say what the limit is instead of \"Invalid amount\".",
+    "A society balance change that failed to save is retried instead of only being logged.",
+    "New tables are created automatically and every new option has a safe default."
+  ]
 }
